@@ -1,0 +1,18 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face { 
+  font-family: "banglaFont"; 
+  src: url("./banglafont.ttf"); 
+} 
+
+/*@layer base {*/
+/*  html, body {*/
+/*    font-family: "banglaFont" !important;*/
+/*  } */
+/*}*/
+
