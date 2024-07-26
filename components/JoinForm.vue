@@ -1,6 +1,6 @@
 <template>
-  <div class="w-[40%] bg-william-500 px-10 py-16 rounded-lg">
-    <p class="text-4xl font-semibold text-white leading-tight text-center mb-8">
+  <div class="mt-8 w-[90%] md:w-[40%] bg-william-500  p-5 md:px-10 md:py-16 rounded-lg">
+    <p class="text-lg md:text-4xl font-semibold text-white leading-tight text-center mb-8">
       এখনি জয়েন করুন আমাদের চলমান কোর্সে ভর্তি হতে
     </p>
 
@@ -12,11 +12,11 @@
       />
     </template>
 
-    <form class="flex flex-col gap-5 mt-5" @submit.prevent="handelRegistration">
+    <form class="flex flex-col gap-2 md:gap-5 mt-5" @submit.prevent="handelRegistration">
       <div class="flex flex-col">
         <input
           type="phone"
-          class="px-5 py-4 rounded-lg"
+          class="md:px-5 p-2 md:py-4 rounded-lg"
           v-model="phone"
           placeholder="মোবাইল নাম্বার দিন"
           autocomplete="phone"
@@ -28,7 +28,7 @@
       <div class="flex flex-col">
         <input
           type="email"
-          class="px-5 py-4 rounded-lg"
+          class="md:px-5 p-2 md:py-4 rounded-lg"
           v-model="email"
           placeholder="ইমেইল দিন"
           autocomplete="email"
@@ -40,7 +40,7 @@
       <div class="flex flex-col">
         <input
           type="password"
-          class="px-5 py-4 rounded-lg"
+          class="md:px-5 p-2 md:py-4 rounded-lg"
           v-model="password"
           placeholder="পাসওয়ার্ড দিন (******)"
           autocomplete="current-password"
@@ -53,13 +53,13 @@
         <button
           type="submit"
           :disabled="status === 'pending'"
-          class="bg-black w-full text-center py-5 text-white text-xl rounded-lg disabled:bg-black/70"
+          class="bg-black w-full text-center md:px-5 p-2 md:py-4 text-white text-xl rounded-lg disabled:bg-black/70"
         >
           সাইন আপ করুন
         </button>
       </div>
       <UDivider label="OR"> </UDivider>
-      <div>
+      <div class="text-center lg:text-left">
         <p class="text-white">Already have an account ?</p>
         <NuxtLink to="/auth/login" class="underline text-blue-800">login now</NuxtLink>
       </div>

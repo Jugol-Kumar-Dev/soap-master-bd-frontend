@@ -9,7 +9,7 @@ export default defineNuxtConfig({
       title:"Saop Master Bangladesh"
     }
   },
-  appDir: 'app',
+  
   modules: [
     '@nuxt/ui',
     '@pinia/nuxt',
@@ -23,6 +23,4 @@ export default defineNuxtConfig({
       }
     }
   }
-  
-
 })

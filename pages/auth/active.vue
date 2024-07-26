@@ -40,9 +40,9 @@
   </div>
 </template>
   
-  <script setup>
+<script setup>
 definePageMeta({
-  middleware: ["auth"],
+  middleware: ["auth", "active"],
 });
 </script>
   

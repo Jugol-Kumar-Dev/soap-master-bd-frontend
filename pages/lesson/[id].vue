@@ -37,16 +37,14 @@ definePageMeta({
   middleware:["auth", "active"]
 })
 
-
-
+const toast = useToast();
 const route = useRoute();
 const {data, status, error} = useLazyAsyncData('single-course', ()=> useApiFetch(`/read-lesson/${route.params?.id}`))
 
-
-if (status === 'success' && !error.value) {
+if(status.value === 'error'){
   throw createError({
     statusCode: error?.value?.statusCode,
-    statusMessage:  error?.value?.statusMessage,
+    statusMessage: error?.value?.statusMessage,
   });
 }
 

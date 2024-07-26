@@ -4,11 +4,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     const router = useRouter()
 
     if(!auth.isLogin) {
-        toast.add({
-            color:"red",
-            title:"Unautorized Access",
-            description:"Your Not Logined"
-        })
+        toast.add({title:"Unautorized Access"})
         await router.push('/auth/login')
     }
 })

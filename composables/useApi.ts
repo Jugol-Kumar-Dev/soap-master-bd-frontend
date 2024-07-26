@@ -1,14 +1,15 @@
-import { useRuntimeConfig } from '#app'
+// import { useRuntimeConfig } from '#app'
 import { useAuthStore } from '~/stores/useAuth'
 
 export const useApiFetch = async (url: string, options = {}) => {
   const config = useRuntimeConfig()
-  const authStore = useAuthStore()
+  const auth = useAuthStore();
+  
   const defaultOptions = {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${authStore?.user?.token}`
+      Authorization: `Bearer ${auth?.token }`
     },
   }
   
